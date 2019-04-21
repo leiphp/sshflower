@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<package name="default" extends="struts-default">
+<action name="browseCatalog" class="flowerAction" method="browseCatalog">
+<result name="success">/menu.jsp</result>
+</action>
+<action name="browseNewFlower"    class="flowerAction" method="browseNewFlower">
+<result name="success">/newFlower.jsp</result>
+</action>
+<action name="browseFlowerPaging"    class="flowerAction" method="browseFlowerPaging">
+<result name="success">/browseFlowerPaging.jsp</result>
+</action>
+
+<action name="addUser"  class="userAction" method="addUser">
+<result name="success">/register_success.jsp</result>
+<result name="error">/register.jsp</result>
+</action>
+ <action name="checkUser"  class="userAction" method="checkUser">
+<result name="success">/login_success.jsp</result>
+<result name="error">/login_failure.jsp</result>       
+</action>
+<action name="logOut"     class="userAction" method="logOut">
+<result name="success">/index.jsp</result>
+</action>
+<action name="updateUserPassword"      class="userAction" method="updateUserPassword">
+<result name="success">/login.jsp</result>
+<result name="error">/modifyPassword.jsp</result>
+</action>
+<action name="updateUserDetail"     class="userAction" method="updateUserDetail">
+<result name="success">/updateUserDetail_success.jsp</result>
+<result name="error">/modifyDetail.jsp</result>
+</action>
+<action name="shoppingAction"    class="shoppingAction" method="addToCart">
+<result name="success">/addToCart_success.jsp</result>
+</action>
+<action name="updateCart"        class="shoppingAction" method="updateCart">
+<result name="success">/showCart.jsp</result>
+</action>
+<action name="checkOut"        class="orderAction" method="checkOut">
+<result name="success">/checkout_success.jsp</result>
+<result name="error">/login.jsp</result>
+</action>
+</package>
+
+</struts>

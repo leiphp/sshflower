@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-4-18 22:07:34 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="cn.lxtkj.model.Userdetail" table="userdetail" catalog="jkxyshsflower">
+        <id name="userid" type="java.lang.Integer">
+            <column name="userid" />
+            <generator class="foreign">
+                <param name="property">user</param>
+            </generator>
+        </id>
+        <one-to-one name="user" class="cn.lxtkj.model.User" constrained="true"></one-to-one>
+        <property name="xb" type="java.lang.Byte">
+            <column name="xb" />
+        </property>
+        <property name="truename" type="string">
+            <column name="truename" length="20" />
+        </property>
+        <property name="csrq" type="date">
+            <column name="csrq" length="10" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="11" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="catalog" match-catalog="jkxyshsflower"></table-filter>
+	<table-filter match-name="flower" match-catalog="jkxyshsflower"></table-filter>
+	<table-filter match-name="guashi" match-catalog="jkxyshsflower"></table-filter>
+	<table-filter match-name="orderitem"
+		match-catalog="jkxyshsflower">
+	</table-filter>
+	<table-filter match-name="orders" match-catalog="jkxyshsflower"></table-filter>
+	<table-filter match-name="product" match-catalog="jkxyshsflower"></table-filter>
+	<table-filter match-name="user" match-catalog="jkxyshsflower"></table-filter>
+	<table-filter match-name="userdetail"
+		match-catalog="jkxyshsflower">
+	</table-filter>
+</hibernate-reverse-engineering>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-4-18 22:07:34 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="cn.lxtkj.model.User" table="user" catalog="jkxyshsflower">
+        <id name="userid" type="java.lang.Integer">
+            <column name="userid" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="20" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" />
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="10" />
+        </property>
+        <set name="orderses" table="orders" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="cn.lxtkj.model.Orders" />
+        </set>
+        <one-to-one name="userdetail" class="cn.lxtkj.model.Userdetail" cascade="all"></one-to-one>
+        <!-- <set name="guashis" table="guashi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" unique="true" />
+            </key>
+            <one-to-many class="cn.lxtkj.model.Guashi" />
+        </set> -->
+        <one-to-one name="guashi" class="cn.lxtkj.model.Guashi" property-ref="user"></one-to-one>
+    </class>
+</hibernate-mapping>
